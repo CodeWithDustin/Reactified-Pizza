@@ -1,3 +1,4 @@
+import Pizza from "../pizza/Pizza";
 
 const pizzaData = [
   {
@@ -43,3 +44,17 @@ const pizzaData = [
     soldOut: false,
   },
 ];
+
+const Menu = () => {
+  return (
+    <main className="menu">
+      <ul className="pizzas">
+        {pizzaData.map((pizza, index) => (
+          <Pizza key={index} pizza={pizza} />
+        ))}
+      </ul>
+    </main>
+  );
+};
+
+export default Menu;
